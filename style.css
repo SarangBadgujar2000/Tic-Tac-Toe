@@ -1,0 +1,19 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+.box{
+    border: 1px solid;
+}
+/* utility classes */
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.Player1,.Player2{
+    margin: 4rem;
+}
+.container{
+    margin-top: 3rem;
+}
