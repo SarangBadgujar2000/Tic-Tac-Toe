@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;400&family=Roboto:wght@400;700&display=swap');
+
+body{
+    background-color: aliceblue;
+    font-family: 'Poppins',sans-serif;
+}
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3,10vw);
@@ -5,6 +11,43 @@
 }
 .box{
     border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10vw;
+    
+}
+.box:hover{
+    cursor: pointer;
+    background-color: lightblue; 
+}
+#clearbtn{
+    background-color: #2294ed;;
+    border-radius: 6px;
+    font-weight: 700;
+    color: white;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px #577592;
+    transition: 0.2s ease-out;
+}
+#clearbtn:hover{
+    cursor: pointer;
+}
+
+.resetbtn{ 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+@keyframes blink {
+    0%, 49.9%, 100% {
+        opacity: 0;
+    }
+    50%, 99.9% {
+        opacity: 1;
+    }
+}
+#Draw{
+    animation: blink 1s infinite; /* Apply the animation to the <p> tag */
 }
 /* utility classes */
 .flex{
@@ -17,3 +60,52 @@
 .container{
     margin-top: 3rem;
 }
+.b-left{
+    border-left: none;
+}
+.b-right{
+    border-right: none;
+}
+.b-top{
+    border-top: none;
+}
+.b-bottom{
+    border-bottom: none;
+}
+@media only screen and (max-width: 800px) {
+   
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-container{
+        grid-template-columns: repeat(3,15vw);
+        grid-template-rows: repeat(3,15vw);
+    }
+    .Player1,.Player2{
+        height: 6rem;
+        margin: 0;
+    }
+    .box{
+        font-size: 15vw;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+   
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-container{
+        grid-template-columns: repeat(3,30vw);
+        grid-template-rows: repeat(3,30vw);
+    }
+    .Player1,.Player2{
+        height: 6rem;
+        margin: 0;
+    }
+    .box{
+        font-size: 30vw;
+    }
+  }
